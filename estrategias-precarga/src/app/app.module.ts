@@ -13,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { OptInPreloadingStrategy } from './strategies/opt-in-preloading-strategy';
 import { NetworkawarePreloadingStrategy } from './strategies/networkaware-preloading-strategy';
+import { OnDemandPreloadingStrategy } from './strategies/ondemand-preloading-strategy';
 
 @NgModule({
   declarations: [AppComponent, NavComponent],
@@ -27,7 +28,7 @@ import { NetworkawarePreloadingStrategy } from './strategies/networkaware-preloa
     MatIconModule,
     MatListModule,
   ],
-  providers: [OptInPreloadingStrategy, NetworkawarePreloadingStrategy],
+  providers: [OnDemandPreloadingStrategy],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

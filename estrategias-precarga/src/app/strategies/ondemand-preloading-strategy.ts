@@ -24,6 +24,8 @@ export class OnDemandPreloadingStrategy implements PreloadingStrategy {
   }
 
   preload(route: Route, load: () => Observable<any>): Observable<any> {
+    console.log('call preload');
+
     return this.preloadOnDemand$.pipe(
       mergeMap((preloadingOptions) => {
         const preload = this.checkPreload(route, preloadingOptions);

@@ -1,0 +1,6 @@
+<p>Progreso actual: {{ progress }}</p>
+<p *ngIf="progress >= 100">Proceso terminado {{ text }}</p>
+
+<button (click)="processInsideNgZone()">Procesar dentro de NG Zone</button
+><br />
+<button (click)="processOutsideNgZone()">Procesar fuera del NG Zone</button>

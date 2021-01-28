@@ -29,5 +29,8 @@
     </mat-toolbar>
     <!-- Add Content Here -->
     <router-outlet></router-outlet>
+
+    <button (click)="preLoadAll()">Preload all</button>
+    <button (click)="preLoad('settings')">Preload settings</button>
   </mat-sidenav-content>
 </mat-sidenav-container>
