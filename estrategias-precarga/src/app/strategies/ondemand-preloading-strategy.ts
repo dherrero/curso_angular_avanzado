@@ -24,16 +24,20 @@ export class OnDemandPreloadingStrategy implements PreloadingStrategy {
   }
 
   preload(route: Route, load: () => Observable<any>): Observable<any> {
-    console.log('call preload');
+    console.log('call preload', route);
 
-    return this.preloadOnDemand$.pipe(
-      mergeMap((preloadingOptions) => {
-        const preload = this.checkPreload(route, preloadingOptions);
-        console.log(`${preload ? '' : 'NO'} precargamos la ruta ${route.path}`);
+    return route?.data?.preload
+      ? this.preloadOnDemand$.pipe(
+          mergeMap((preloadingOptions) => {
+            const preload = this.checkPreload(route, preloadingOptions);
+            console.log(
+              `${preload ? '' : 'NO'} precargamos la ruta ${route.path}`
+            );
 
-        return preload ? load() : EMPTY;
-      })
-    );
+            return preload ? load() : EMPTY;
+          })
+        )
+      : EMPTY;
   }
 
   // método privada que nos permite saber si una ruta debe ser precargada o no

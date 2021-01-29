@@ -25,7 +25,7 @@ const ROUTES: Routes = [
         (m) => m.ContactsModule
       ),
     data: {
-      preload: true,
+      preload: false,
     },
   },
   {
