@@ -15,15 +15,23 @@ import { Observable } from 'rxjs';
 export class AsyncPipeComponent implements OnInit {
   @Input()
   items!: Observable<any>;
-  // listItems: [] = [];
+
+  items2: Array<any> = [];
+  listItems: [] = [];
 
   constructor() {}
 
   ngOnInit(): void {
-    /*  this.items.subscribe((items) => {
+    this.items.subscribe((items) => {
       console.log('items', items);
 
-      //  this.listItems = items;
-    }); */
+      this.listItems = items;
+    });
+  }
+
+  // TODO: función para contrastar
+  addItems2() {
+    const number: number = Math.floor(Math.random() * 100 + 1);
+    this.items2.push({ number });
   }
 }
