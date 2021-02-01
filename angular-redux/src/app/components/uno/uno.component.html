@@ -1,0 +1,7 @@
+<p>
+  Mensaje: {{ nuevoMensaje }}<br />
+  Valor: {{ valor }}
+</p>
+<input type="text" [(ngModel)]="nuevoMensaje" />
+<button (click)="cambiarMensaje()">Cambiar mensaje</button>
+<button (click)="cambiarValor()">Cambiar valor</button>
