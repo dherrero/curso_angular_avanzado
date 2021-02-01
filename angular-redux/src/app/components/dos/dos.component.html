@@ -3,3 +3,8 @@
   Mensaje en dos: {{ mensaje }}<br />
   Valor en dos: {{ valor }}
 </p>
+
+<h3>lista de todo {{ title }}</h3>
+<ul>
+  <li *ngFor="let todo of todos">{{ todo.name }} - {{ todo.description }}</li>
+</ul>

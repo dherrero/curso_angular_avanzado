@@ -19,6 +19,8 @@ export function chatReducer(
   state = defaultAppState,
   action: any
 ): IAppChatState {
+  console.log('hola chatReducer');
+
   switch (action.type) {
     case ACTION_CAMBIO_MENSAJE:
       return {

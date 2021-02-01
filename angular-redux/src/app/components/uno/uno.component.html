@@ -5,3 +5,17 @@
 <input type="text" [(ngModel)]="nuevoMensaje" />
 <button (click)="cambiarMensaje()">Cambiar mensaje</button>
 <button (click)="cambiarValor()">Cambiar valor</button>
+<hr />
+
+<input type="text" [(ngModel)]="title" placeholder="titulo de la lista" />
+<div style="border: 1px solid blue; padding: 5px 5px 15px 5px">
+  <p>Add todo into the list</p>
+  <input type="text" [(ngModel)]="todo.name" placeholder="titulo del Todo" />
+  <input
+    type="text"
+    [(ngModel)]="todo.description"
+    placeholder="descripcion del Todo"
+  />
+  <input type="checkbox" [(ngModel)]="todo.urgent" /> Urgente
+  <button (click)="addTodo()">Add todo</button>
+</div>
