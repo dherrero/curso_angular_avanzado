@@ -1,0 +1,23 @@
+<div>
+  <h1 [appHighlight]="color">Directivas</h1>
+
+  <input type="radio" name="color" [(ngModel)]="color" value="red" /> Red
+  <input type="radio" name="color" [(ngModel)]="color" value="blue" /> Blue
+  <input type="radio" name="color" [(ngModel)]="color" value="green" /> Green
+  <input type="radio" name="color" [(ngModel)]="color" value="cyan" /> Cyan
+  <input type="radio" name="color" [(ngModel)]="color" value="orange" /> Orange
+  <hr />
+  <p [appFontSize]="size">Texto con directiva de tamaño</p>
+  <input type="range" min="16" max="100" [(ngModel)]="size" />
+  <p>Tamaño actual: {{ size }}px</p>
+  <hr />
+  <p *rolCorrect="checkRol">Probando la directiva estructural</p>
+  <input type="checkbox" [(ngModel)]="checkRol" /> Rol ok?
+
+  <ng-template [rolCorrect]="checkRol">
+    <p>Directiva estructural con ng-template</p>
+  </ng-template>
+
+  <hr />
+  <app-spied appLifecycle *rolCorrect="checkRol"></app-spied>
+</div>
