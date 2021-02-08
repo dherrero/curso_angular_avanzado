@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "prod-build": "ng build --prod",
+    "prod": "npm run prod-build && cd dist/pwa-angular && http-server -o"
   },
   "private": true,
   "dependencies": {
@@ -20,8 +22,12 @@
     "@angular/platform-browser-dynamic": "~11.0.6",
     "@angular/router": "~11.0.6",
     "@angular/service-worker": "~11.0.6",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
+    "web-push": "^3.4.4",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {

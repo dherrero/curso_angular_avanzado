@@ -23,7 +23,22 @@
         "files": [
           "/assets/**",
           "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
+        ],
+        "urls": [
+          "https://fonts.googleapis.com/*"
         ]
+      }
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "frases-chuck-norris",
+      "urls": ["https://api.chucknorris.io/jokes/random"],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxAge": "1h",
+        "maxSize": 20,
+        "timeout": "5s"
       }
     }
   ]
