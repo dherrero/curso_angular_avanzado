@@ -1,0 +1,14 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "mi-primer-schematic": {
+      "description": "Mi primer schematic.",
+      "factory": "./mi-primer-schematic/index#miPrimerSchematic",
+      "schema": "./mi-primer-schematic/schema.json"
+    },
+    "my-sch": {
+      "description": "A blank schematic.",
+      "factory": "./my-sch/index#mySch"
+    }
+  }
+}

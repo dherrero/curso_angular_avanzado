@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "id": "MiPrimerSchema",
+    "title": "Mi primer schema",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "El nombre de la persona que vas a saludar.",
+            "type": "string",
+            "$default": {
+                "$source": "argv",
+                "index": 0
+            }
+        },
+        "apellido": {
+            "description": "El apellido de la persona que vas a saludar.",
+            "type": "string",
+            "$default": {
+                "$source": "argv",
+                "index": 1
+            }
+        },
+        "edad": {
+            "description": "La edad de la persona que vas a saludar.",
+            "type": "number",
+            "$default": {
+                "$source": "argv",
+                "index": 2
+            }
+        }
+    },
+    "required": [
+        "name",
+        "apellido"
+    ]
+}
